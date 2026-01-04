@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-tasks',
-  imports: [ FormsModule],
+  imports: [ FormsModule,NgIf],
   standalone: true,
   templateUrl: './tasks.html',
   styleUrl: './tasks.css',
@@ -13,7 +13,8 @@ import { FormsModule } from '@angular/forms';
 export class Tasks implements OnInit {
     taskLevel = signal("Medium");
     tasks: Task[] = [];
-  
+    lastId: string = "";
+
     newTask: Task = {
       id: "0" ,
       title: "",
@@ -41,8 +42,10 @@ export class Tasks implements OnInit {
     }
 
     addTask(){
-      
-      console.log(this.tasks.at(-1)?.id);
+      this.lastId = this.tasks.at(-1)?.id ?? "0";
+      const incrementId: number = Number(this.lastId) + 1; 
+      this.newTask.id = ( incrementId.toString() || "0");
+      console.log();
       this.taskService.postTask(this.newTask)
         .subscribe( {
             next: (response) => {
@@ -55,7 +58,7 @@ export class Tasks implements OnInit {
       
     };
       
-    deleteTask(id: number) {
+    deleteTask(id: string) {
       console.log("id : ",id);
       
       this.taskService.deleteTask(id).subscribe({

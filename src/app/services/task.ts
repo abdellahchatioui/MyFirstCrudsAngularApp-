@@ -32,9 +32,10 @@ export class TaskService {
   // In your service file
 private apiUrl = 'http://localhost:4000/tasks'; 
 
-deleteTask(id: number): Observable<Task> {
+deleteTask(id: string): Observable<Task> {
   // Ensure task.id is passed correctly (e.g., /tasks/11)
   const url = `${this.apiUrl}/${id}`; 
   return this.http.delete<Task>(url);
 }
+
 }

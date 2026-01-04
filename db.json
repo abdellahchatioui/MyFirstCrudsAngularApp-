@@ -1,74 +1,38 @@
 {
   "tasks": [
     {
-      "id": "4",
-      "title": "Fix bugs in the app",
-      "level": "high",
+      "id": "2",
+      "title": "aaa",
+      "level": "Medium",
       "completed": false
     },
     {
-      "id": "5",
-      "title": "Write unit tests",
-      "level": "medium",
-      "completed": true
+      "id": "3",
+      "title": "",
+      "level": "Medium",
+      "completed": false
     },
     {
-      "id": "6",
-      "title": "Deploy to production",
-      "level": "high",
+      "id": "4",
+      "title": "bbbbb",
+      "level": "Medium",
       "completed": false
     },
     {
       "id": "7",
-      "title": "Refactor code",
-      "level": "medium",
-      "completed": false
-    },
-    {
-      "id": 1,
-      "title": "adaa",
+      "title": "bbb",
       "level": "Medium",
       "completed": false
     },
     {
-      "id": 1,
-      "title": "dada",
+      "id": "8",
+      "title": "asa",
       "level": "Medium",
       "completed": false
     },
     {
-      "id": 2,
-      "title": "adssss",
-      "level": "Medium",
-      "completed": false
-    },
-    {
-      "id": 3,
-      "title": "dd",
-      "level": "Medium",
-      "completed": false
-    },
-    {
-      "id": 0,
-      "title": "sa",
-      "level": "Medium",
-      "completed": false
-    },
-    {
-      "id": 0,
-      "title": "sass",
-      "level": "Medium",
-      "completed": false
-    },
-    {
-      "id": 0,
-      "title": "sassddax",
-      "level": "Medium",
-      "completed": false
-    },
-    {
-      "id": "0",
-      "title": "ddd",
+      "id": "9",
+      "title": "zz",
       "level": "Medium",
       "completed": false
     }

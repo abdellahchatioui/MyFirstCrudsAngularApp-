@@ -8,12 +8,13 @@
     <button (click)="addTask()" [disabled]="newTask.title.length == 0">➕</button>
     <h2>Tasks List:</h2>
     <ul>
-        @for (task of tasks; track $index) {
-            <li [style.color]="$index % 2 === 0 ? 'green' : 'blue'">{{$index + 1}}-{{ task.title }}
-                <button (click)="deleteTask(task.id)">❌</button>
+        @for (task of tasks; track task.id; let i = $index) {
+            <li [style.color]="i % 2 === 0 ? 'green' : 'blue'">
+                {{task.id}}-{{ task.title }}
+                <button (click)="deleteTask(task.id)">❌</button>  
             </li>
-
         }
+        
         <!-- Alternative Angular syntax
         <li *ngFor="let task of tasks; let i = index">
             
